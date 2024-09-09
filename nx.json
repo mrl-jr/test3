@@ -24,36 +24,13 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
-  "targetDefaults": {
-    "e2e-ci--**/*": {
-      "dependsOn": ["^build"]
-    }
-  },
+  "targetDefaults": { "e2e-ci--**/*": { "dependsOn": ["^build"] } },
   "generators": {
-    "@nx/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
-  }
+    "@nx/next": { "application": { "style": "css", "linter": "eslint" } }
+  },
+  "nxCloudId": "66df2a879ed33c0db4edf1ae"
 }
